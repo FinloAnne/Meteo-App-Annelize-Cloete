@@ -3,26 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="src/styles.css" />
     <title>My meteo App</title>
   </head>
   <body>
 <header>
-        <form>
-          <input type="search" placeholder="Enter a city.."
-            required />
-          <input type="submit" value="Search"/>
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-input"
+            id="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
         </form>
       </header>
-        <main>
-        <div>
-            <h1>Paris</h1>
-            <p>
-            Tuesday 14:49, moderate rain <br />
-            Humidity: 87%, Wind:7.2km/h
+      <main>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Paris</h1>
+            <p class="current-details">
+              <span id="current-date"></span>, moderate rain <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
             </p>
           </div>
-          <div>
-            ☀️24°C
+          <div class="current-temperature">
+            <span class="current-temperature-icon">☀️</span
+            ><span class="current-temperature-value" id="current-temperature"
+              >24</span
+            ><span class="current-temperature-unit">°C</span>
           </div>
         </div>
       </main>
